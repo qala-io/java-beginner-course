@@ -3,7 +3,7 @@ Getting acquainted with Java
 
 # Reading books
 
-* Start reading a book for Java beginners (e.g. 2 volumnes by (Horstmann)[http://horstmann.com/corejava/index.html])
+* Start reading a book for Java beginners (e.g. 2 volumes by [Horstmann](http://horstmann.com/corejava/index.html))
 * Things that you need to know before starting next steps:
    * Primitives, strings
    * Loops and conditions: `if`, `for`
