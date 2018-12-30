@@ -1,13 +1,22 @@
-This programme is for those who doesn't know how to write software. For those who is overwhelmed with 
-information on the Internet and doesn't understand which direction to take and what to study in particular.
+Java Beginners course
+---
 
-This course doesn't contain teaching material itself. Instead it consists of a series of steps that you'll 
-need to go through to write a realistic web app.
+Welcome to a self paced course for those who want to become Java Engineers (if you're a big boy already, 
+check out [Java Professionals course](https://github.com/qala-io/java-course)). This course is for you if:
+
+* You don't know programming at all or started to learn it recently
+* You're not sure about what to learn first and what can be postponed
+* You know Java syntax, but you don't know how real programmers put it all together to create real software
+
+This course doesn't replace books, in fact it relies on you reading books. It consists of a series of 
+steps that you'll need to go through to write a realistic web app. The steps will tell you which information you
+need to know to accomplish the tasks, but you'll have to find and read the actual literature by yourself. 
 
 # Task description
 
-You'll need to implement an analogue of [Trello](https://trello.com). It requires a lot of efforts even to implement
-a very simplistic version. But our main goal is to learn real-life programming and not to earn money. 
+You'll need to implement an analogue of [Trello](https://trello.com), so get yourself acquainted with this site. 
+It requires a lot of efforts even to implement a very simplistic version. But our main goal is to learn 
+real-life programming and not to earn money. 
 
 If you have your own idea that you'd like to implement instead - that's great. Just make sure that:
 
