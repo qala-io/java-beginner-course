@@ -23,3 +23,9 @@ process because they expect quick results. But it doesn't work that way - learni
 that often takes 5 years or more. Though by that time you're likely to get a job and keep learning at work.
 
 * [Java Basics and Domain Model](./docs/programme/java-basics.md)
+* Repository and Service layers
+* Testing
+* JDBC Repository
+* Servlets & Tomcat
+* HTML & JS
+* Authentication
