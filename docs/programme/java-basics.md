@@ -1,7 +1,7 @@
 Getting acquainted with Java
 ---
 
-# Reading books
+# Step1: Reading books
 
 * Start reading a book for Java beginners (e.g. 2 volumes by [Horstmann](http://horstmann.com/corejava/index.html))
 * Things that you need to know before starting next steps:
@@ -20,7 +20,7 @@ should be able to get the drift without giving it much of a thought. But underst
 community to get angry if they see common conventions violated. So start getting used to the conventions from the 
 beginning. 
 
-# Creating domain model
+# Step2: Creating domain model
 
 Domain model describes the problem that you're solving, it contains your app's terminology, concepts and relations.
 It's the core of your project.
@@ -83,7 +83,7 @@ See how setLastName() and setFirstName() didn't change their signature? This mea
 state of our class without breaking any other classes. So in the future when creating fields keep this trick
 in mind and don't expose class's internals.
 
-# Compiling & Running
+# Step3: Compiling & Running
 
 * Create a `main()` method to run such code:
 
@@ -121,7 +121,7 @@ Card [Task #1] was assigned to [project_manager@email.com]
 * To make it easier to log objects' information you may want to override `toString()` method in some of your classes
 * Compile this code in command line and run it ([what are class files anyway?](./articles/class-files.md))
 
-# Make it interactive
+# Step4: Make it interactive
 
 * Create a console API so that user could interact with our app. Something like this:
 

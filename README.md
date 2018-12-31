@@ -31,8 +31,8 @@ Within the course you're going to have steps to accomplish - most of them will b
 questions that you should be able to answer (at least to yourself) - please make sure you don't skip this part.
 
 * [Java Basics and Domain Model](./docs/programme/java-basics.md)
-* Repository and Service layers
 * Testing
+* Repository and Service layers
 * JDBC Repository
 * Servlets & Tomcat
 * HTML & JS
