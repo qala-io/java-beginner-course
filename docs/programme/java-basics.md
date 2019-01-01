@@ -1,7 +1,7 @@
 Getting acquainted with Java
 ---
 
-# Step1: Reading books
+# Step1: Prerequisites
 
 * Start reading a book for Java beginners (e.g. 2 volumes by [Horstmann](http://horstmann.com/corejava/index.html))
 * Things that you need to know before starting next steps:
@@ -147,4 +147,12 @@ Card [Commit a thoughtcrime] was assigned to [julia@oceania.io]
 * Read about how console input and output is done in Java programs under the hood ([link](./articles/io-sockets.md))
 
 It's very rare for Java devs to create interactive console apps, but we can't go straight to web apps because it's
-going to be too much. We'll first build lower layers and then eventually implement a web interface. 
+going to be too much. We'll first build lower layers and then eventually implement a web interface.
+
+# Step5: Packaging your app
+
+JAR files are convenient for distributing Java software or libraries. Libraries - are pieces of code that someone
+else wrote and published, and now you can download it and use it as if it were a part of your project.
+
+* Read about jar files, create an executable jar file - it should run the code above via `java -jar myapp.jar`
+* Try to unpack JAR file with `jar` and Unzip utilities

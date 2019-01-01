@@ -1,26 +1,18 @@
 Tools
 ---
 
-* Read about jar files (it's a way of packaging your code into an archive that's easy to distribute), create an
-executable jar file - it should run the code above via `java -jar myapp.jar`
-
 # Step1: IDE
 
 You can't keep working command line forever. Average real life apps have tons of code (>50K lines and hundreds to
 thousands of classes), it would be a nightmare to write it all in a notepad and compile it all in command line.
 That's why you need to use IDE (e.g. IngelliJ IDEA has free Community Version). 
 
-While IDE let's you easily navigate through your project, you can't just compile and package your apps in IDE:
+* Install an IDE like IntelliJ IDEA
+* Open your project, set up SDK (Java installation)
+* Try running your console app from IntelliJ
+* Try debugging your app (putting a breakpoint and then running the app in Debug mode)
 
-* Any project will need to hook-up libraries
-* First of all every programmer in your team (average team is ~5 developers) would have to manually configure 
-his IDE to work with the project. 
-
-# Step2: Build Tools
-
-# Step3: VCS
-
-# Step4: Logging
+# Logging
 
 While `System.out.println` worked fine for your simple case, you'll have to stop using it:
 
@@ -28,6 +20,19 @@ While `System.out.println` worked fine for your simple case, you'll have to stop
 * Most of the time we want to write log into files and not into console (though we could do both)
 * We'd like to categorize different lines of log - some of them are written because there are errors, others - 
 just to explain what's happening with the system at any moment of time. We'd like to draw attention to error logs.
+
+That's why we instead use special libraries for logging. The most popular choice nowadays is SLF4J+Logback.
+
+# Step2: Build Tools
+
+While IDE let's you easily navigate through your project, you can't just compile and package your apps in IDE:
+
+* Any project will need to hook-up libraries
+* First of all every programmer in your team (average team is ~5 developers) would have to manually configure 
+his IDE to work with the project. 
+
+# Step3: VCS
+
 
 # Tests
 
