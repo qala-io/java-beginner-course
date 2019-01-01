@@ -137,25 +137,14 @@ Column: TODO
 User [winston.smith@oceania.io] created a card [Commit a thoughtcrime] in column [TODO]
 You just created a card. Assign it to your friend.
 
-Email:julia@oceania.io
-First name:Julia
-Last name:Noname
+Email: julia@oceania.io
+First name: Julia
+Last name: Noname
 Card [Commit a thoughtcrime] was assigned to [julia@oceania.io]
 ``` 
 
 * Note, that users' data as well as card information was entered in console
 * Read about how console input and output is done in Java programs under the hood ([link](./articles/io-sockets.md))
 
-## Logging (TBD)
-
-While `System.out.println` worked fine for your simple case, you'll have to stop using it:
-
-* First of all it's just not convenient to concatenate strings and values all the time
-* Most of the time we want to write log into files and not into console (though we could do both)
-* We'd like to categorize different lines of log - some of them are written because there are errors, others - 
-just to explain what's happening with the system at any moment of time. We'd like to draw attention to error logs.
-
-So your tasks are:
-* Download libraries for logging - (Logback)[https://logback.qos.ch/download.html] is a popular choice, in order
-to work with them you'll need 2 jar files:
-* Use
+It's very rare for Java devs to create interactive console apps, but we can't go straight to web apps because it's
+going to be too much. We'll first build lower layers and then eventually implement a web interface. 

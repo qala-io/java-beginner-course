@@ -30,7 +30,7 @@ If you have your own idea that you'd like to implement instead - that's great. J
 Within the course you're going to have steps to accomplish - most of them will be reading, practicing. There will be 
 questions that you should be able to answer (at least to yourself) - please make sure you don't skip this part.
 
-* [Java Basics and Domain Model](./docs/programme/java-basics.md)
+* [Domain Model](./docs/programme/java-basics.md)
 * Testing
 * Repository and Service layers
 * JDBC Repository
