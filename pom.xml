@@ -7,6 +7,24 @@
   <groupId>io.qala.java-beginner-course</groupId>
   <artifactId>java-beginner-course</artifactId>
   <version>1-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <!--SLF4J is a logging facade that provides an ability to replace the underlying logging mechanism with
+      popular alternatives-->
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.13</version>
+    </dependency>
+    <dependency>
+      <!--Logback is one of the most popular and functionally rich loggers. Log4j 2 is not used because
+      this is something new on the market that the team doesn't have a lot of expertise with. But in the
+      future we may want to switch to it.-->
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.7</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>

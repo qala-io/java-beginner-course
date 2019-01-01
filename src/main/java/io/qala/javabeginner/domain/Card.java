@@ -1,8 +1,12 @@
 package io.qala.javabeginner.domain;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.ZonedDateTime;
 
 public class Card {
+    private static final Logger LOG = LoggerFactory.getLogger(Card.class);
     private String title, description;
     private User assignee, creator;
     private Column column;
@@ -13,24 +17,22 @@ public class Card {
         this.creator = creator;
         this.column = column;
         this.creationTime = ZonedDateTime.now();
-        System.out.println("User [" + creator.getEmail() + "]" +
-                " created a card [" + title + "]" +
-                " in column [" + column.getName() + "]");
+        LOG.info("User [{}] created a card [{}] in column [{}]", creator.getEmail(), title, column.getName());
     }
 
     public void assignTo(User assignee) {
         this.assignee = assignee;
-        System.out.println("Card [" + title + "] was assigned to [" + assignee.getEmail() + "]");
+        LOG.info("Card [{}] was assigned to [{}]", title, assignee.getEmail());
     }
 
     public void moveTo(Column column) {
         this.column = column;
-        System.out.println("Card [" + title + "] was moved to [" + column.getName() + "]");
+        LOG.info("Card [{}] was moved to [{}]", title, column.getName());
     }
 
     public void setDescription(String description) {
         this.description = description;
-        System.out.println("Card [" + title + "] was given a description [" + description + "]");
+        LOG.info("Card [{}] was given a description [{}]", title, description);
     }
 
     @Override

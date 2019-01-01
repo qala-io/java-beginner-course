@@ -31,6 +31,7 @@ Within the course you're going to have steps to accomplish - most of them will b
 questions that you should be able to answer (at least to yourself) - please make sure you don't skip this part.
 
 * [Domain Model](./docs/programme/java-basics.md)
+* [Tools](./docs/programme/tools.md)
 * Testing
 * Repository and Service layers
 * JDBC Repository
