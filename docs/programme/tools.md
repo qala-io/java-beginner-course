@@ -93,15 +93,25 @@ At some point you'll need to
 [learn Maven deeper](https://github.com/qala-io/java-course/blob/master/docs/programme/maven.md), but for now 
 your main goal is to learn Java. Maven will simplify some of our further steps.
 
-# Step4: VCS (TBD)
+# Step4: Version control system (VCS)
 
+VCS allows keeping track of who & when added a change in the source code. This allows:
 
-# Tests (TBD)
+* Reverting the changes to previous version (e.g. the change introduced a critical bug)
+* Understand who and why added this or that line of code (we create description when we add changes to VCS)
+* Reviewing the changes done by other team members
 
-While developers write code to solve some real-world problems, we also need to check that our code works. When we
-keep adding new code into our project there is a risk that we break something that previously worked. In real life
-this happens _all the time_. Thus we have to check whether it still works - it's called testing. There are 2 choices: 
+There are plenty of tools that allow doing this, but today by far the most widespread is Git. You need to start 
+using it, so find some tutorials and:
 
-* You can keep re-checking your code manually. This is super tedious and time-consuming, which means you'll
-start skipping some checks after a while. This will result in a poorly working software.
-* Or you can write yet another code (automated tests) that checks the main code (production code)
+* Create a Git repository at GitHub or BitBucket or any other free Git Server
+* Create a `.gitignore` file and list things that you want to exclude. Generally we track only changes in the source
+code, so everything else (`target/`, `*.log`, your IDE-related files) have to be excluded
+* Push all your current code into the repo
+* From now on keep committing & pushing when you change something in the code 
+
+There are 2 types of people who use Git - those who don't know it and those who know how it works internally. So
+if you want to be a professional, at some point you'll need to read a chapter on 
+[Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) and find out what Blob, 
+Tree and Commit objects are, and what symbolic references are. You can also find video lessons on this topic on
+Youtube.
