@@ -57,16 +57,41 @@ When you run your app next time, you should see something like this in console:
 `logback.xml` file on the Internet. 
 * You may also configure Logback to put these lines into some file
 * Try unpacking jar files that you downloaded - find the classes that you imported in your code
-* Answer this question: why was LOG field marked as `static`? Can we leave out `static`? Does it make sense 
+* Note that you can Ctrl+Click on the class in IDE and it will decompile the class from JAR for you
+* Answer this question: why was `LOG` field marked as `static`? Can we leave out `static`? Does it make sense 
 to do so? 
 
-# Step3: Build Tools (TBD)
+# Step3: Build Tools
 
-While IDE let's you easily navigate through your project, you can't just compile and package your apps in IDE:
+While IDE let's you easily navigate through your project, that's not enough:
 
-* Any project will need to hook-up libraries
-* First of all every programmer in your team (average team is ~5 developers) would have to manually configure 
-his IDE to work with the project. 
+* It's hard for a newcomer to join the project because he would have to set up his IDE, download all of the
+dependencies (there could be hundreds of them). That's tedious and error-prone.
+* You don't want to manually package the binary for further deployment. Team members' local configuration may 
+differ from each other, but you want to guarantee that the packaged JAR file always works. That's why we set up so
+called Build Servers (Jenkins, TeamCity, etc) - these are tools that run on remote servers and can package your
+app. Those often don't have UI set up in their OS and they can't use IDE.
+* We also would like to have some life-cycle in projects - it would compile things in the right order, run checks,
+package a jar file, upload it somewhere.
+
+That's why we have special Build Tools. Most notorious examples are: Ant, Maven, Gradle. The most used one is Maven.
+So:
+
+* Read some introductory articles about Maven
+* Download and install Maven locally. It's an archive that needs to be unpacked and you'll need to set up M2_HOME
+env variable as well as put `M2_HOME/bin` into your `path` variable.
+* Create `pom.xml` file in your project, where you specify:
+   * groupId/artifactId/version of your project
+   * Dependencies (slf4j-api, logback-classic, logback-core) 
+   * Configuration of maven-jar-plugin so that it produces an executable jar 
+* Try building your project with `mvn package` - if it's successful, you should get a jar file in your `target`
+directory that is executable with `java -jar`
+* Delete all your IDE files and try to re-open the project with IDE. Your IDE should recognize that it's a Maven
+project and add libraries to its Dependencies automatically.
+
+At some point you'll need to 
+[learn Maven deeper](https://github.com/qala-io/java-course/blob/master/docs/programme/maven.md), but for now 
+your main goal is to learn Java. Maven will simplify some of our further steps.
 
 # Step4: VCS (TBD)
 
