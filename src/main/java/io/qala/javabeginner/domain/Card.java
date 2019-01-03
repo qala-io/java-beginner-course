@@ -7,7 +7,7 @@ import java.time.ZonedDateTime;
 
 public class Card {
     private static final Logger LOG = LoggerFactory.getLogger(Card.class);
-    private String title, description;
+    private String id, title, description;
     private User assignee, creator;
     private Column column;
     private ZonedDateTime creationTime;
@@ -20,9 +20,21 @@ public class Card {
         LOG.info("User [{}] created a card [{}] in column [{}]", creator.getEmail(), title, column.getName());
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public void assignTo(User assignee) {
         this.assignee = assignee;
         LOG.info("Card [{}] was assigned to [{}]", title, assignee.getEmail());
+    }
+
+    public User getAssignee() {
+        return assignee;
     }
 
     public void moveTo(Column column) {

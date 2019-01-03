@@ -1,10 +1,18 @@
 package io.qala.javabeginner.domain;
 
 public class User {
-    private String email, firstName, lastName;
+    private String id, email, firstName, lastName;
 
     public User(String email) {
         this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setFirstName(String firstName) {
