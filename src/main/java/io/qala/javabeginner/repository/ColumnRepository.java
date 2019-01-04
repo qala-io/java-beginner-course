@@ -15,9 +15,6 @@ public class ColumnRepository {
         columnsById.put(column.getId(), column);
         columnsByName.put(column.getName(), column);
     }
-    public Column findById(String id) {
-        return columnsById.get(id);
-    }
     public Column findByName(String name) {
         return columnsByName.get(name);
     }

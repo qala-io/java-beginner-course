@@ -41,10 +41,16 @@ public class Card {
         this.column = column;
         LOG.info("Card [{}] was moved to [{}]", title, column.getName());
     }
+    public Column getColumn() {
+        return column;
+    }
 
     public void setDescription(String description) {
         this.description = description;
         LOG.info("Card [{}] was given a description [{}]", title, description);
+    }
+    public String getTitle() {
+        return title;
     }
 
     @Override

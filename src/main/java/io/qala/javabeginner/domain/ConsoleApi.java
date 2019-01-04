@@ -31,14 +31,17 @@ public class ConsoleApi {
             else if(command.equals("2"))
                 showCards();
             else
-                System.out.println("Uncrecognized command, try again");
+                System.out.println("The command was not recognized, try again");
         }
     }
     private void showCards() {
         for (Column column : columnRepository.findAllOrderedByPosition()) {
-            System.out.println();
+            String line = column.getName() + ":\t";
+            for (Card card : cardRepository.findByColumn(column))
+                line += card.getTitle() + "(" + card.getAssignee().getFullName() + "), ";
+            line = line.substring(0, line.length() - 2);
+            System.out.println(line);
         }
-        cardRepository.getAll();
     }
     private Card createCard(User currentUser) {
         System.out.print("Title: ");
