@@ -62,7 +62,7 @@ they should state intentions, expectations and the code should be business-orien
 
 You'll need to keep writing tests for each new piece of functionality that you add.
 
-# Terminology
+# Summary
 
 Such testing is important because:
 

@@ -34,8 +34,8 @@ questions that you should be able to answer (at least to yourself) - please make
 * [Tools](./docs/programme/tools.md)
 * [Repository (DAO) layer](./docs/programme/repository-layer.md)
 * [Testing](./docs/programme/testing.md)
-* Service layer
 * JDBC Repository
+* Service layer
 * Servlets & Tomcat
 * HTML & JS
 * Authentication

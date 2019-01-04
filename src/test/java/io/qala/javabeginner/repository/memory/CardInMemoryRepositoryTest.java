@@ -1,18 +1,19 @@
-package io.qala.javabeginner.repository;
+package io.qala.javabeginner.repository.memory;
 
 import io.qala.javabeginner.domain.Card;
 import io.qala.javabeginner.domain.Column;
 import io.qala.javabeginner.domain.User;
+import io.qala.javabeginner.repository.CardRepository;
+import org.junit.Test;
 
 import java.util.List;
-import java.util.UUID;
 
 import static org.junit.Assert.*;
 
-public class CardRepositoryTest {
+public class CardInMemoryRepositoryTest {
     @Test
     public void savingCardAssignsId() {
-        CardRepository repo = new CardRepository();
+        CardRepository repo = new CardInMemoryRepository();
         Card newCard = cardInColumn(column());
 
         repo.save(newCard);
@@ -20,7 +21,7 @@ public class CardRepositoryTest {
     }
     @Test
     public void savingCardLetsUsFindItByColumn() {
-        CardRepository repo = new CardRepository();
+        CardRepository repo = new CardInMemoryRepository();
         Column column = column();
         Card newCard = cardInColumn(column);
         repo.save(newCard);
@@ -31,7 +32,7 @@ public class CardRepositoryTest {
     }
     @Test
     public void ifNoCardsInColumn_thenEmptyCardListIsReturned() {
-        CardRepository repo = new CardRepository();
+        CardRepository repo = new CardInMemoryRepository();
         Card newCard = cardInColumn(column());
         repo.save(newCard);
 
@@ -41,7 +42,7 @@ public class CardRepositoryTest {
 
     private static Column column() {
         Column column = new Column("TODO");
-        new ColumnRepository().save(column);
+        new ColumnInMemoryRepository().save(column);
         return column;
     }
 

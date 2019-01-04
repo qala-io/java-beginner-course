@@ -2,29 +2,12 @@ package io.qala.javabeginner.repository;
 
 import io.qala.javabeginner.domain.Column;
 
-import java.util.*;
+import java.util.List;
 
-public class ColumnRepository {
-    private final Map<String, Column> columnsById = new HashMap<>();
-    private final Map<String, Column> columnsByName = new HashMap<>();
+public interface ColumnRepository {
+    void save(Column column);
 
-    public void save(Column column) {
-        if(column.getId() != null)
-            throw new IllegalArgumentException("The column already stored in DB: " + column.getId());
-        column.setId(UUID.randomUUID().toString());
-        columnsById.put(column.getId(), column);
-        columnsByName.put(column.getName(), column);
-    }
-    public Column findByName(String name) {
-        return columnsByName.get(name);
-    }
-    public List<Column> findAllOrderedByPosition() {
-        return new ArrayList<>(orderedByPosition(columnsById.values()));
-    }
+    Column findByName(String name);
 
-    private List<Column> orderedByPosition(Collection<Column> unordered) {
-        List<Column> ordered = new ArrayList<>(unordered);
-        ordered.sort(Comparator.comparingInt(Column::getPositionOnBoard));
-        return ordered;
-    }
+    List<Column> findAllOrderedByPosition();
 }

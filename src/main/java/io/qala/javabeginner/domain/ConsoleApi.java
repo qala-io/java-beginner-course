@@ -1,15 +1,16 @@
 package io.qala.javabeginner.domain;
 
-import io.qala.javabeginner.repository.CardRepository;
-import io.qala.javabeginner.repository.ColumnRepository;
-import io.qala.javabeginner.repository.UserRepository;
+import io.qala.javabeginner.repository.*;
+import io.qala.javabeginner.repository.memory.CardInMemoryRepository;
+import io.qala.javabeginner.repository.memory.ColumnInMemoryRepository;
+import io.qala.javabeginner.repository.memory.UserInMemoryRepository;
 
 import java.util.Scanner;
 
 public class ConsoleApi {
-    private final UserRepository userRepository = new UserRepository();
-    private final CardRepository cardRepository = new CardRepository();
-    private final ColumnRepository columnRepository = new ColumnRepository();
+    private final UserRepository userRepository = new UserInMemoryRepository();
+    private final CardRepository cardRepository = new CardInMemoryRepository();
+    private final ColumnRepository columnRepository = new ColumnInMemoryRepository();
 
     private final Scanner in = new Scanner(System.in);
 
