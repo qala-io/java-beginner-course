@@ -20,6 +20,8 @@ for now:
 * Learn how these data structures work and when they can be useful:
    * ArrayList 
    * Hash Map (aka Hash Table) with external chaining is used in `java.util.HashMap`
+   * Look into other Hash-based maps: LinkedHashMap, IdentityHashMap. Note, that the latter implements a 
+   completely different structure - a Hash Map with linear probing.
 * To each class of our Domain Model add a field: `String id`. This is going to be our 
 [surrogate key](./articles/surrogate-keys.md).
 * Create classes: `UserRepository`, `CardRepository`

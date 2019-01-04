@@ -5,7 +5,7 @@ import io.qala.javabeginner.domain.Card;
 import java.util.*;
 
 public class CardRepository {
-    private final Map<String, Card> cardById = new HashMap<>();
+    private final Map<String, Card> cardById = new LinkedHashMap<>();
     private final Map<String, List<Card>> cardByAssignee = new HashMap<>();
 
     public void save(Card newCard) {
@@ -15,6 +15,9 @@ public class CardRepository {
         cardById.put(newCard.getId(), newCard);
         List<Card> assigneeCards = cardByAssignee.computeIfAbsent(newCard.getAssignee().getId(), (c) -> new ArrayList<>());
         assigneeCards.add(newCard);
+    }
+    public List<Card> getAll() {
+        return new ArrayList<>(cardById.values());
     }
 
 }

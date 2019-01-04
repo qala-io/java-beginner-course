@@ -10,7 +10,7 @@ public class UserRepository {
     private final Map<String, User> usersById = new HashMap<>();
     private final Map<String, User> usersByEmail = new HashMap<>();
 
-    public synchronized void saveOrUpdate(User newUser) {
+    public void saveOrUpdate(User newUser) {
         if(newUser.getId() == null)
             newUser.setId(UUID.randomUUID().toString());
         else {
@@ -21,7 +21,7 @@ public class UserRepository {
         usersById.put(newUser.getId(), newUser);
         usersByEmail.put(newUser.getEmail(), newUser);
     }
-    public synchronized User findUserByEmail(String email) {
+    public User findByEmail(String email) {
         return usersByEmail.get(email);
     }
 }
