@@ -33,7 +33,7 @@ questions that you should be able to answer (at least to yourself) - please make
 * [Domain Model](./docs/programme/java-basics.md)
 * [Tools](./docs/programme/tools.md)
 * [Repository (DAO) layer](./docs/programme/repository-layer.md)
-* Testing
+* [Testing](./docs/programme/testing.md)
 * Service layer
 * JDBC Repository
 * Servlets & Tomcat
