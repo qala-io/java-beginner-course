@@ -46,9 +46,11 @@ everyone who needs to run tests), and also it's very easy to add to the project.
 
 * Add H2 JDBC driver to Maven dependencies
 * Now something should create tables when the app is starting (because we use in-memory DB each time we restart 
-the app everything is going to be gone). For that:
+the app everything is going to be cleared). For that:
    * Add Flyway tool as a dependency
-   * Create Flyway SQL Migration that creates tables for each of your domain classes
+   * Create Flyway SQL Migration that creates tables for each of your domain classes. Such files go to 
+   `src/main/resources` folder.
+   * Start `new Flyway().migrate()` migrations from one of your main classes
 
 # Step3: Create JDBC Repositories
 

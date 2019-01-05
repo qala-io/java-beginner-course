@@ -1,6 +1,10 @@
-package io.qala.javabeginner.domain;
+package io.qala.javabeginner;
 
-public class Main {
+import io.qala.javabeginner.domain.Card;
+import io.qala.javabeginner.domain.Column;
+import io.qala.javabeginner.domain.User;
+
+public class ExampleWorkflow {
     public static void main(String[] args) {
         Column todo = new Column("TODO"),
                inProgress = new Column("In Progress"),

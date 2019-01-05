@@ -1,9 +1,17 @@
-package io.qala.javabeginner.domain;
+package io.qala.javabeginner;
 
-import io.qala.javabeginner.repository.*;
+import io.qala.javabeginner.domain.Card;
+import io.qala.javabeginner.domain.Column;
+import io.qala.javabeginner.domain.User;
+import io.qala.javabeginner.repository.CardRepository;
+import io.qala.javabeginner.repository.ColumnRepository;
+import io.qala.javabeginner.repository.UserRepository;
 import io.qala.javabeginner.repository.memory.CardInMemoryRepository;
 import io.qala.javabeginner.repository.memory.ColumnInMemoryRepository;
 import io.qala.javabeginner.repository.memory.UserInMemoryRepository;
+import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.configuration.FluentConfiguration;
+import org.h2.jdbcx.JdbcDataSource;
 
 import java.util.Scanner;
 
@@ -19,6 +27,11 @@ public class ConsoleApi {
     }
 
     private void run() {
+        JdbcDataSource dataSource = new JdbcDataSource();
+        dataSource.setUrl("jdbc:h2:mem:javabeginner;DB_CLOSE_DELAY=-1");
+        dataSource.setUser("sa");
+        new Flyway(new FluentConfiguration().dataSource(dataSource).locations("migrations")).migrate();
+
         System.out.println("First, log in!");
         User currentUser = enterUser(in);
         System.out.println("Hello " + currentUser.getFullName() + ", now you can create a task.");

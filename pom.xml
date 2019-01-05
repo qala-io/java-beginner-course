@@ -9,6 +9,16 @@
   <version>1-SNAPSHOT</version>
   <dependencies>
     <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.197</version>
+    </dependency>
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>5.2.4</version>
+    </dependency>
+    <dependency>
       <!--SLF4J is a logging facade that provides an ability to replace the underlying logging mechanism with
       popular alternatives-->
       <groupId>org.slf4j</groupId>
