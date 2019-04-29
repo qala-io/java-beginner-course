@@ -30,6 +30,7 @@ If you have your own idea that you'd like to implement instead - that's great. J
 Within the course you're going to have steps to accomplish - most of them will be reading, practicing. There will be 
 questions that you should be able to answer (at least to yourself) - please make sure you don't skip this part.
 
+* [Prerequisites](./docs/programme/prereqs.md)
 * [Domain Model](./docs/programme/java-basics.md)
 * [Tools](./docs/programme/tools.md)
 * [Repository (DAO) layer](./docs/programme/repository-layer.md)

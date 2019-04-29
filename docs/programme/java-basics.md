@@ -1,26 +1,7 @@
 Getting acquainted with Java
 ---
 
-# Step1: Prerequisites
-
-* Start reading a book for Java beginners (e.g. 2 volumes by [Horstmann](http://horstmann.com/corejava/index.html))
-* Things that you need to know before starting next steps:
-   * Primitives, strings
-   * Loops and conditions: `if`, `for`
-   * Classes, fields, static fields, methods, constructors, objects (instances)
-   * Difference between comparing references (`==`) and data (`equals()`)
-* You can read the rest of the book in parallel with this course
-* Things that you can skip completely:
-   * AWT, Swing or JavaFX (tools for desktop apps). We're going to build a web app, desktop development is 
-   not very popular nowadays.
-   * Stream API (don't confuse with IO streams) and closures aren't important unless you want to understand 
-   someone else's code that utilizes them. 
-* Get acquainted with official Java naming/formatting conventions, there will be examples in this course so you 
-should be able to get the drift without giving it much of a thought. But understand that it's common in dev 
-community to get angry if they see common conventions violated. So start getting used to the conventions from the 
-beginning. 
-
-# Step2: Creating domain model
+# Step1: Creating domain model
 
 Domain model describes the problem that you're solving, it contains your app's terminology, concepts and relations.
 It's the core of your project.
@@ -83,7 +64,7 @@ See how setLastName() and setFirstName() didn't change their signature? This mea
 state of our class without breaking any other classes. So in the future when creating fields keep this trick
 in mind and don't expose class's internals.
 
-# Step3: Compiling & Running
+# Step2: Compiling & Running
 
 * Create a `main()` method to run such code:
 
@@ -121,7 +102,7 @@ Card [Task #1] was assigned to [project_manager@email.com]
 * To make it easier to log objects' information you may want to override `toString()` method in some of your classes
 * Compile this code in command line and run it ([what are class files anyway?](./articles/class-files.md))
 
-# Step4: Make it interactive
+# Step3: Make it interactive
 
 * Create a console API so that user could interact with our app. Something like this:
 
@@ -149,7 +130,7 @@ Card [Commit a thoughtcrime] was assigned to [julia@oceania.io]
 It's very rare for Java devs to create interactive console apps, but we can't go straight to web apps because it's
 going to be too much. We'll first build lower layers and then eventually implement a web interface.
 
-# Step5: Packaging your app
+# Step4: Packaging your app
 
 JAR files are convenient for distributing Java software or libraries. Libraries - are pieces of code that someone
 else wrote and published, and now you can download it and use it as if it were a part of your project.
