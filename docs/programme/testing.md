@@ -57,8 +57,8 @@ public class CardRepositoryTest {
 ```
 
 Note that we created 2 private methods to aid with readability. It's important for tests to be easy to read - 
-they should state intentions, expectations and the code should be business-oriented (as opposed to technical 
-- with loops and conditions). Tests should also be simple - they need to check little pieces of functionality. 
+they should state intentions, expectations and the code should be business-oriented (as opposed to technical - 
+with loops and conditions). Tests should also be simple - they need to check little pieces of functionality. 
 
 You'll need to keep writing tests for each new piece of functionality that you add.
 
@@ -70,6 +70,8 @@ Such testing is important because:
 re-running the whole app to manually check the fixes can actually be slower.
 * It helps checking if the old functionality still works after new changes are introduced. It's _very_ often
 that we break parts of the app that worked fine before.
+* It simplifies introducing newcomers to the team. It's easy for newcomers to introduce bugs because they
+don't know the project well yet. But if tests are in place there's some safety net. 
 
 If you write tests for new functionality (or test it manually) - it's called Acceptance Testing (don't confuse 
 with similarly sounding User Acceptance Testing - UAT). If you check that old functionality works - it's called 
@@ -78,7 +80,15 @@ Regression Testing.
 When your app grows your Regression suite grows as well. Often the amount of tests is greater than the amount of
 production code. So take this seriously. 
 
-There is also a notion of TDD (Test Driven Development) - it's when you write tests first (they fail of course)
-and then you write your production code to let the tests pass. This might make you more productive especially
-if the feature that you write is very big and complicated - TDD makes you concentrate on small pieces and not be
-overwhelmed. There is a book by Kent Beck that talks about TDD in details. 
+There is also a notion of TDD (Test Driven Development). It's when you write tests first (they fail of course)
+and then you write your production code to let the tests pass. It's crucial that you don't write all tests
+right away and then implement the whole functionality. At the beginning you implement impaired functionality -
+something that works only in specific cases. And then you write more and more tests and implement more and more of
+production code. 
+
+TDD might make you more productive especially if the feature that you write is very big and complicated - 
+TDD makes you concentrate on small pieces and not be overwhelmed. There is a book 
+[Test Driven Development: By Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530) 
+by Kent Beck that explains how to do TDD right.
+
+To TDD or not to TDD is your choice - the end result shouldn't depend on how you got there. 
