@@ -30,7 +30,8 @@ The former provides interfaces, the latter provides the implementation. So:
 You can find them on the official sites, but there is also a central repository of most of the libraries that Java
 devs need. You can find all different versions of different libs there: https://mvnrepository.com/
 * Add these jar files in your project dependencies in IDE
-* After they are added, you can try using logging instead of `System.out.println` in your Domain classes like this:
+* After they are added, you can try using logging instead of `System.out.println`. See 
+[Logback documentation](http://logback.qos.ch/manual/). Your Domain classes should log messages like this:
 
 ```java
 import org.slf4j.Logger;
