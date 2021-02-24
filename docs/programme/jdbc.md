@@ -23,7 +23,7 @@ needs to change to
 private final CardRepository cardRepository = new CardInMemoryRepository(); 
 ``` 
 
-Note, that IntelliJ allows doing all of this with one function: Refactor->Extract->Interface.
+Note, that IntelliJ allows doing all of this automatically: Refactor->Extract->Interface.
 
 * You should also rename your test classes according to the new names of production classes.
 
@@ -41,8 +41,8 @@ see how simple it is to introduce interfaces at some point in the future without
 
 For our purposes we'll be using H2 database. H2 is an in-memory database written in Java. We don't frequently use
 such databases for real apps. Instead we use standalone databases like MySQL, PostgreSQL, Oracle. But H2 is very
-useful because we can easily write automated tests with it (instead of deploying standalone DB locally and to 
-everyone who needs to run tests), and also it's very easy to add to the project.    
+useful because we can easily write automated tests with it (instead of deploying a standalone DB locally), and also 
+it's very easy to add to the project.
 
 * Add H2 JDBC driver to Maven dependencies
 * Now something should create tables when the app is starting (because we use in-memory DB each time we restart 
@@ -56,7 +56,7 @@ the app everything is going to be cleared). For that:
 
 
 * Implement XxxJdbcRepository for each interface
-   * Create tables for each of our domain object. Use Forkeign Keys (FK) to reference records from other tables. 
+   * Create tables for each of our domain object. Use Foreign Keys (FK) to reference records from other tables. 
    Usually we use tools like Flyway in order to create these tables, but for now you could run these statements
    in one of the classes in your app. 
    * For now create Connection object every time you need to run SQL query

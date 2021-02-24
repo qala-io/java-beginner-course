@@ -1,7 +1,7 @@
 Repository Layer
 ---
 
-So at the moment we have Domain Model and a console interface. It's time to store data in database. In Java there
+So at the moment we have Domain Model and a console interface. It's time to store data in a database. In Java there
 are special interfaces and classes to work with DB - they are part of so called JDBC. And we could use 
 them in all parts of the project to run SQL queries. But this is usually a bad idea. We need to isolate 
 DB-related logic into separate layer called Repository (or DAO - data access object). Why?
@@ -116,7 +116,7 @@ Choose 1 to create a card, 2 to show the list of cards, 0 to exit
 0
 ``` 
 
-And here is a glimpse of how you things can be organized:
+And here is a glimpse of how things can be organized:
 
 ```java
     private void run() {

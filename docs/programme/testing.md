@@ -13,8 +13,9 @@ and they are crucial in modern software engineering.
 
 # Step1: Preparation for testing
 
-* Add a JUnit4 dependency to your Maven. This is a library that will help us write and run tests. There are 3 
-popular choices: JUnit4, TestNG which are simpler and JUnit5 which is more complicated.
+* Add a [JUnit4 dependency](https://mvnrepository.com/artifact/junit/junit) to your Maven. This is a library that
+  will help us write and run tests. There are 3 popular choices: JUnit4, TestNG which are 
+  simpler and JUnit5 which is more complicated.
 * The scope of this Maven dependency must be `test`
 * Create `src/test/java` folder, there you can create a package with your test classes. We usually place
 test classes into the same packages where the classes-under-test are located. So same package, but not in 
